@@ -143,6 +143,11 @@ function increaseScore() {
     if(score % (brickRowCount * brickColumnCount) === 0) {
         showAllBricks();
     }
+
+    if(score === brickColumnCount * brickRowCount) {
+        showAllBricks();
+        score = 0;
+    }
 }
 
 function showAllBricks() {
